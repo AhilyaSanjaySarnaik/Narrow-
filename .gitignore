@@ -5,3 +5,4 @@ __pycache__/
 .env
 data/*.sqlite3
 models/
+kb/DELOL-shit-0b2127b1dd10.md
