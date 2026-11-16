@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "narrow"
+version = "0.1.0"
+description = "A local-first, evidence-grounded cybersecurity assistant"
+requires-python = ">=3.12"
+dependencies = [
+    "certifi>=2024.0.0",
+    "pypdf>=5.0",
+    "openpyxl>=3.1",
+    "pillow>=10.0",
+    "pytesseract>=0.3.10",
+    "python-docx>=1.1",
+    "python-pptx>=0.6.23",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=3.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[project.scripts]
+narrow = "narrow.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["narrow*"]
